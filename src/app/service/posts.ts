@@ -17,3 +17,7 @@ export async function getAllPosts(): Promise<Post[]> {
     .then<Post[]>(JSON.parse) //받아온 데이터를 JSON 으로 파싱
     .then((posts) => posts.sort((a, b) => (a.date > b.date ? -1 : 1))); //날짜순으로 정렬
 }
+
+export async function getFeaturedPosts(): Promise<Post[]> {
+  return getAllPosts().then((posts) => posts.filter((post) => post.featured));
+}
