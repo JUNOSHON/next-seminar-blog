@@ -21,3 +21,8 @@ export async function getAllPosts(): Promise<Post[]> {
 export async function getFeaturedPosts(): Promise<Post[]> {
   return getAllPosts().then((posts) => posts.filter((post) => post.featured));
 }
+
+//피쳐되지 않은 포스트
+export async function getNonFeaturedPosts(): Promise<Post[]> {
+  return getAllPosts().then((posts) => posts.filter((post) => !post.featured));
+}
