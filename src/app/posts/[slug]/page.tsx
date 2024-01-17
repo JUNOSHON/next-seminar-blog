@@ -1,3 +1,4 @@
+import AdjacentPostCard from "@/app/components/AdjacentPostCard";
 import MarkdownViewer from "@/app/components/MarkdownViewer";
 import PostContent from "@/app/components/PostContent";
 import { getPostData } from "@/app/service/posts";
@@ -24,9 +25,9 @@ export default async function page({ params: { slug } }: Props) {
       />
 
       <PostContent post={post} />
-      <section>
-        {prev && <p>{prev.title}</p>}
-        {next && <p>{next.title}</p>}
+      <section className="flex shadow-md ">
+        {prev && <AdjacentPostCard post={prev} type="prev" />}
+        {next && <AdjacentPostCard post={next} type="next" />}
       </section>
     </article>
   );
