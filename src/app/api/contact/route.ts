@@ -1,4 +1,5 @@
 import * as yup from 'yup'
+import {sendEmail} from "@/app/service/email";
 
 
 const bodySchema = yup.object().shape({
@@ -8,12 +9,18 @@ const bodySchema = yup.object().shape({
 })
 
 export async function POST(req: Request) {
+    const body = await req.json();
 
-    if (!bodySchema.isValidSync(req.body)) {
-        return new Response('유효하지 않은 포맷', {status: 400})
+    if (!bodySchema.isValidSync(body)) {
+        return new Response(JSON.stringify({message:'메일 전송 실패'},),{status:500})
     }
-    const {from, subject, message} = req.body;
+    const {from, subject, message} = body;
     //노드메일러로 메일 보내기
 
-    return new Response('Hello Next js')
+    return sendEmail(body)
+        .then(() => new Response(JSON.stringify({message: "메일 전송 성공"}), {status: 200}))
+        .catch((error) => {
+            console.error(error);
+            return new Response(JSON.stringify({message:'메일 전송 실패'},),{status:500});
+        })
 }

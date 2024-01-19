@@ -46,15 +46,15 @@ export default function ContactForm() {
             {banner && <Banner banner={banner}/>}
             <form onSubmit={onSubmit}
                   className={'w-full my-4 max-w-md flex flex-col gap-2 m-4 p-4 bg-slate-700 rounded-xl text-white '}>
-                <label htmlFor='from' className='font-semibold'>Your Email</label>
-                <input type="email" id='from' name='from' required autoFocus value={form.from} onChange={onChange}/>
+                <label htmlFor='from' className='font-semibold '>Your Email</label>
+                <input className='text-black' type="email" id='from' name='from' required autoFocus value={form.from} onChange={onChange}/>
 
-                <label htmlFor='subject'>Subject</label>
-                <input className='font-semibold' type="text" id='subject' name='subject' required value={form.subject}
+                <label htmlFor='subject' className='font-semibold'>Subject</label>
+                <input className='font-semibold text-black' type="text" id='subject' name='subject' required value={form.subject}
                        onChange={onChange}/>
 
                 <label className='font-semibold' htmlFor='message'>Message</label>
-                <textarea className='text-black' id='message' name='message' required value={form.message} rows={10}
+                <textarea className='text-black' id='mes sage' name='message' required value={form.message} rows={10}
                           onChange={onChange}/>
                 <button className='bg-yellow-300 text-black font-bold hover:bg-yellow-400'>Submit</button>
             </form>

@@ -382,12 +382,30 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/node@npm:*":
+  version: 20.11.5
+  resolution: "@types/node@npm:20.11.5"
+  dependencies:
+    undici-types: ~5.26.4
+  checksum: a542727de1334ae20a3ca034b0ecf4b464a57ca01efc4f9cf43bd9ab93896125ab3c2de060ecd8f6ae23b86c6bf3463f681b643e69c032c6a662d376c98a6092
+  languageName: node
+  linkType: hard
+
 "@types/node@npm:^20":
   version: 20.11.2
   resolution: "@types/node@npm:20.11.2"
   dependencies:
     undici-types: ~5.26.4
   checksum: 28ce6425cd1cc93aac12309c81b986a9fe1be8da6a877bc51ee890ea46174a104177d74c9b7a86907e54cc66917fdb57259b0c8456ec4cabb07faf174e790556
+  languageName: node
+  linkType: hard
+
+"@types/nodemailer@npm:^6.4.14":
+  version: 6.4.14
+  resolution: "@types/nodemailer@npm:6.4.14"
+  dependencies:
+    "@types/node": "*"
+  checksum: 5f61f01dd736b17f431d1e8b320322f86460604b45df947fc4bc8999d7c7719405e349f7abba86e4fb100a464a30b52615d00dac03d9cb37562ff04487ebd310
   languageName: node
   linkType: hard
 
@@ -3577,6 +3595,7 @@ __metadata:
   dependencies:
     "@tailwindcss/typography": ^0.5.10
     "@types/node": ^20
+    "@types/nodemailer": ^6.4.14
     "@types/react": ^18
     "@types/react-dom": ^18
     "@types/react-syntax-highlighter": ^15.5.11
