@@ -4,7 +4,7 @@ import ContactForm from "@/app/components/ContactForm";
 const LINKS = [
   {icon: <AiFillGithub />, url:'https://github.com/JUNOSHON'},
   {icon: <AiFillInstagram />, url:'https://www.instagram.com/'},
-  {icon: <AiFillFolder />, url:''},
+  {icon: <AiFillFolder />, url:'https://velog.io/@sanolx/posts'},
 ]
 export default function page() {
   return <section className='flex flex-col items-center'>
