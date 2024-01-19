@@ -4,12 +4,21 @@ import PostContent from "@/app/components/PostContent";
 import { getPostData } from "@/app/service/posts";
 import Image from "next/image";
 import { FaRegCalendarAlt } from "react-icons/fa";
+import {Metadata} from "next";
 
 type Props = {
   params: {
     slug: string;
   };
 };
+
+export async function generateMetadata({ params: { slug } }: Props):Promise<Metadata>{
+    const {title,description} = await getPostData(slug);
+    return{
+        title,
+        description
+    }
+}
 
 export default async function page({ params: { slug } }: Props) {
   const post = await getPostData(slug);
