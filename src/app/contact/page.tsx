@@ -1,5 +1,12 @@
 import { AiFillFolder, AiFillGithub, AiFillInstagram } from "react-icons/ai";
 import ContactForm from "@/app/components/ContactForm";
+import {Metadata} from "next";
+
+export const metadata: Metadata = {
+  title: "Contact me",
+  description: "한밭대학교 무선통신 소프트웨어 연구실 Contact",
+};
+
 
 const LINKS = [
   { icon: <AiFillGithub />, url: "https://github.com/JUNOSHON" },
