@@ -1,5 +1,11 @@
 import {AiFillGithub, AiFillLinkedin, AiFillYoutube} from "react-icons/ai";
 import ContactForm from "@/app/components/ContactForm";
+import {Metadata} from "next";
+
+export const metadata: Metadata = {
+    title: 'Contact Wisoft',
+    description: 'Contact to Wisoft'
+}
 
 const LINKS = [
     {icon: <AiFillGithub/>, url: ''},
