@@ -1,6 +1,12 @@
 import Hero from "@/app/components/Hero";
+import {Metadata} from 'next';
 
 const TITLE_CLASS = 'text-2xl font-bold text-gray-800 my-2';
+
+export const metadata: Metadata = {
+    title: 'About Wisoft',
+    description: 'Introduce Wisoft',
+}
 
 export default function page() {
     return (<>
